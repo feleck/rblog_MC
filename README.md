@@ -39,7 +39,7 @@ ex. As a user I want to be able to create posts, so that I can share what I am l
 
   **Post**
     title:string
-    content:string
+    content:text
 
   **Project**
     title:string
