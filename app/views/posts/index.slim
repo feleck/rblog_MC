@@ -2,7 +2,7 @@ h1#page_title Stuff I've written
 #post_wrapper.skinny_wrapper
   .post
     - @posts.each do |post|
-      p.date= post.created_at.strftime("%A, %b, %d)")
+      p.date= post.created_at.strftime("%A, %b, %d")
       h2= link_to post.title, post
       hr
   .pagination

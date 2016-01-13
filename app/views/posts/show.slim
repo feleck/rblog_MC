@@ -1,7 +1,18 @@
-h2= @post.title
-p= @post.content
-
-#links
-  = link_to 'Back', root_path
-  = link_to 'Edit', edit_post_path(@post)
-  = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you shure?' }
+#post_show_content.skinny_wrapper.wrapper_padding
+  header
+    p.date= @post.created_at.strftime("%A, %b, %d")
+    h1= @post.title
+    hr
+  .content
+    h2 Somethibg
+    p= @post.content
+  br
+  #share_box
+    p Share The DO list
+    // add twitter facebook and google plus share links
+    = link_to 'http://twitter.com'
+      i.fa.fa-twitter
+    = link_to 'http://facebook.com'
+      i.fa.fa-facebook
+    = link_to  'http://plus.google.com'
+      i.fa.fa-google-plus
