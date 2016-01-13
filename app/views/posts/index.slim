@@ -1,22 +1,13 @@
-.col-1.about.homepage_content
-  h2 About
-  hr/
-  p
-    | Retro shabby chic cornhole tousled authentic, ethical poutine single-origin
-    a href="#"  coffeeh1 Posts
-.col-2.homepage_content
-  h2 Stuff I've written
-  hr
-  h3 The DO list
-  p.date
-    Friday April 10th
-  - @posts.each do |post|
-    h2= link_to post.title, post
-
-.col-3.homepage_content
-  h2 Stuff I've build
-  hr
-  - @posts.each do |post|
-    h2= link_to post.title, post
-
-
+h1#page_title Stuff I've written
+#post_wrapper.skinny_wrapper
+  .post
+    - @posts.each do |post|
+      p.date= post.created_at.strftime("%A, %b, %d)")
+      h2= link_to post.title, post
+      hr
+  .pagination
+    span.previous_page.disabled &#10094; Previous
+    em.current 1
+    = link_to '2', '#', rel: "next"
+    = link_to "#", class: "next_page"
+      Next &#10095;
