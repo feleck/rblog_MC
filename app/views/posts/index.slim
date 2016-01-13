@@ -1,5 +1,22 @@
-h1 Posts
-- @posts.each do |post|
-  h2= link_to post.title, post
+.col-1.about.homepage_content
+  h2 About
+  hr/
+  p
+    | Retro shabby chic cornhole tousled authentic, ethical poutine single-origin
+    a href="#"  coffeeh1 Posts
+.col-2.homepage_content
+  h2 Stuff I've written
+  hr
+  h3 The DO list
+  p.date
+    Friday April 10th
+  - @posts.each do |post|
+    h2= link_to post.title, post
 
-= link_to 'New Post', new_post_path
+.col-3.homepage_content
+  h2 Stuff I've build
+  hr
+  - @posts.each do |post|
+    h2= link_to post.title, post
+
+
