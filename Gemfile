@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'friendly_id'
 
 gem 'puma'
 
