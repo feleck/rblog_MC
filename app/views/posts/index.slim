@@ -6,8 +6,5 @@ h1#page_title Stuff I've written
       h2= link_to post.title, post
       hr
   .pagination
-    span.previous_page.disabled &#10094; Previous
-    em.current 1
-    = link_to '2', '#', rel: "next"
-    = link_to "#", class: "next_page"
-      Next &#10095;
+    = will_paginate @posts
+ 

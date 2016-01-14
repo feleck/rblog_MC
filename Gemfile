@@ -16,6 +16,7 @@ gem 'slim'
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'friendly_id'
+gem 'will_paginate'
 
 gem 'puma'
 
