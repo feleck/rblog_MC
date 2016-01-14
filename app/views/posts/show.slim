@@ -4,9 +4,8 @@
     h1= @post.title
     hr
   .content
-    h2 Somethibg
     p= markdown @post.content
-  br
+  hr
   #share_box
     p Share The DO list
     // add twitter facebook and google plus share links
@@ -16,7 +15,8 @@
       i.fa.fa-facebook
     = link_to  'http://plus.google.com'
       i.fa.fa-google-plus
-
+  hr
+  = render 'disqus'
   #links
     = link_to 'Edit', edit_post_path(@post)
     = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you shure?' }
