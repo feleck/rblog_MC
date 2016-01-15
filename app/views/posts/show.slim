@@ -1,6 +1,6 @@
 #post_show_content.skinny_wrapper.wrapper_padding
   header
-    p.date= @post.created_at.strftime("%A, %b, %d")
+    p.date= nice_date @post.created_at
     h1= @post.title
     hr
   .content

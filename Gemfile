@@ -17,6 +17,7 @@ gem 'redcarpet'
 gem 'pygments.rb'
 gem 'friendly_id'
 gem 'will_paginate'
+gem 'mail_form'
 
 gem 'puma'
 

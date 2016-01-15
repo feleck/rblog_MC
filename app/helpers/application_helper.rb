@@ -20,4 +20,7 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
 
+  def nice_date(date)
+    date.strftime("%A, %b, %d")
+  end
 end

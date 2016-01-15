@@ -10,11 +10,11 @@
     hr
     - @posts.each do |post|
       h3= link_to post.title, post
-      p.date= post.created_at.strftime("%A, %b, %d")
+      p.date= nice_date post.created_at
 
   .col-3.homepage_content
     h2 Stuff I've built
     hr
     - @projects.each do |project|
       h3= link_to project.title, project
-      p.date= project.created_at.strftime("%A, %b, %d")
+      p.date= nice_date project.created_at
