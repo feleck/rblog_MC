@@ -13,14 +13,12 @@ body
     = link_to "eMeeFe", root_path, class: "name"
     nav
       = link_to 'Articles', posts_path
-      = link_to 'Projects', "#"
+      = link_to 'Projects', projects_path
       = link_to 'Contact', '#'
   
   #alert= alert
   #notice= notice
-  .wrapper.wrapper_padding.clearfix
-
-    = yield
+  = yield
 
   footer#main_footer
     p.copywright 2016 &copy; eMeeFe

@@ -1,0 +1,14 @@
+#post_show_content.skinny_wrapper.wrapper_padding
+  header
+    p.date= @project.created_at.strftime("%A, %b, %d")
+    h1= @project.title
+    hr
+  .content
+    p= markdown @project.description
+    .button_wrapper
+      = link_to "Visit #{ @project.title }", @project.link, class: 'project_button', target: 'blank'
+  hr
+
+  #links
+    = link_to 'Edit', edit_post_path(@project)
+    = link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you shure?' }
