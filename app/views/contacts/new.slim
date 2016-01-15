@@ -1,0 +1,20 @@
+h1#page_title Say Hello!
+.skinny_wrapper.wrapper_padding
+  = form_for @contact do |f|
+    = f.label :name
+    br/
+    = f.text_field :name, required: true
+    br/
+    = f.label :email
+    br/
+    = f.email_field :email, required: true
+    br/
+    = f.label :message, 'Write your message here.'
+    br/
+    = f.text_area :message, as: :text
+    br/
+    .hidden
+      = f.label :nickname
+      = f.text_field :nickname, hint: 'Leave this field blank'
+    = f.submit 'Send Message', class: 'button'
+
