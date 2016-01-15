@@ -6,6 +6,11 @@
   .content
     p= markdown @post.content
   hr
+  - if user_signed_in?
+    #admin_links
+      = link_to 'Edit Article', edit_post_path(@post)
+      = link_to 'Delete Article', @post, method: :delete, data: { confirm: 'Are you sure?' }
+
   #share_box
     p Share The DO list
     // add twitter facebook and google plus share links
@@ -17,6 +22,3 @@
       i.fa.fa-google-plus
   hr
   = render 'disqus'
-  #links
-    = link_to 'Edit', edit_post_path(@post)
-    = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }

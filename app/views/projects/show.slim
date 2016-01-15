@@ -8,7 +8,7 @@
     .button_wrapper
       = link_to "Visit #{ @project.title }", @project.link, class: 'project_button', target: 'blank'
   hr
-
-  #links
-    = link_to 'Edit', edit_project_path(@project)
-    = link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' }
+  - if user_signed_in?
+    #admin_links
+      = link_to 'Edit Project', edit_project_path(@project)
+      = link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }
