@@ -16,8 +16,10 @@ body
       = link_to 'Projects', projects_path
       = link_to 'Contact', new_contact_path
   
-  #alert= alert
-  #notice= notice
+  - if notice 
+    p.notice= notice
+  - elsif alert
+    p.alert= alert
   = yield
 
   footer#main_footer
